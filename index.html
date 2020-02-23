@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Gordon - Form Challenge</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <script src="index.js"></script>
 </head>
 <body>
     <div class="form-container">
@@ -14,14 +13,64 @@
             <!-- code for warning: &#9888 -->
             <!-- code for cross: &#10060 -->
             <h1>Sign Up!</h1>
-            <div class='form-fields-container'>
-                <p>Name:</p>
+
+            <div class="stepper-container">
+                <div class="name-step step active">
+                    <p>&#9312; Name --------------- </p>
+                </div>
+
+                <div class="email-step step inactive">
+                    <p>&#9313; Email --------------- </p>
+                </div>
+
+                <div class="confirm-step step inactive">
+                    <p>&#9314; Confirm</p>
+                </div>
+            </div>
+
+            <div class="input-container">
                 <input type="text" placeholder="John Doe">
-                <p>Email:</p>
-                <input type="email" placeholder="john@doe.com">
-                <button>Submit</button>
+            </div>
+
+            <div class="buttons-container">
+                <button>Previous</button>
+                <button>Next</button>
+            </div>
+
+
+                <!-- <p class="input-label">Name</p>
+                <input
+                    required
+                    type="text"
+                    placeholder="John Doe"
+                >
+
+                <p class="input-label">Email</p>
+                <input
+                    required
+                    type="email"
+                    placeholder="john@doe.com"
+                >
+                <button>Submit</button> -->
             </div>
         </form>
     </div>
+
+    <script>
+        const labels = document.querySelectorAll(".input-label");
+        
+        // script to change innerHTML
+        // labels.forEach((el, i) => {
+        //     return el.innerHTML = "Hello";
+        // });
+
+        const inputs = document.querySelectorAll("input");
+        inputs.forEach((el, i) => {
+            // el.addEventListener("focus", () => {
+            //     alert("Touched!");
+            // });
+        });
+        
+    </script>
 </body>
 </html>
